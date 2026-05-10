@@ -17,19 +17,16 @@ The application is engineered to feel like a premium brand experience, avoiding 
 *(Note: Save the screenshots you took into the `public/screenshots/` directory with these names, or update the paths below to match your files!)*
 
 ### 1. Home Page Hero Experience
-<div align="center">
-  <img src="./public/screenshots/home-hero.png" alt="Home Page Hero Section" width="800"/>
-</div>
+<img width="1918" height="905" alt="Screenshot 2026-05-10 173901" src="https://github.com/user-attachments/assets/deb3d113-01c3-454e-a06b-0e984b9e7050" />
+
 
 ### 2. Services Discovery
-<div align="center">
-  <img src="./public/screenshots/services-grid.png" alt="Services Overview Section" width="800"/>
-</div>
+<img width="1919" height="913" alt="Screenshot 2026-05-10 173922" src="https://github.com/user-attachments/assets/1f95c893-8f86-46c1-8296-c1db7fb6a1a4" />
+
 
 ### 3. Transparent Pricing
-<div align="center">
-  <img src="./public/screenshots/pricing-plans.png" alt="Pricing Packages Section" width="800"/>
-</div>
+<img width="1919" height="907" alt="Screenshot 2026-05-10 173948" src="https://github.com/user-attachments/assets/f606bfec-9f27-4346-a15e-543002d47289" />
+
 
 ---
 
