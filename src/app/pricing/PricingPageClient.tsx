@@ -85,7 +85,7 @@ export function PricingPageClient() {
       {/* Pricing Cards */}
       <section className="section-padding bg-black">
         <div className="container-luxury">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
             {pricingPlans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -93,14 +93,14 @@ export function PricingPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 h-full flex flex-col ${
+                className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 flex flex-col ${
                   plan.popular
-                    ? "border-gold/40 bg-gold/[0.03] md:-mt-4 md:mb-0 md:py-12 pt-10"
+                    ? "border-gold/40 bg-gold/[0.03] md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                     : "border-white/5 bg-black-medium"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase whitespace-nowrap z-10">
                     Most Popular
                   </div>
                 )}
@@ -111,7 +111,7 @@ export function PricingPageClient() {
                   <p className="text-warm-white/40 text-xs mb-6">
                     {plan.subtitle}
                   </p>
-                  <div className="font-display text-5xl text-warm-white mb-1">
+                  <div className="font-display text-4xl md:text-5xl text-warm-white mb-1">
                     {plan.price}
                   </div>
                   <p className="text-warm-white/30 text-xs">{plan.period}</p>
@@ -120,9 +120,9 @@ export function PricingPageClient() {
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-center gap-3 text-sm text-warm-white/60"
+                      className="flex items-start gap-3 text-sm text-warm-white/60"
                     >
-                      <CheckCircle size={14} className="text-gold shrink-0" />
+                      <CheckCircle size={14} className="text-gold shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
@@ -135,7 +135,7 @@ export function PricingPageClient() {
                       : "border border-white/20 text-warm-white hover:border-gold hover:text-gold"
                   }`}
                 >
-                  Choose {plan.name}
+                  Get Started
                 </Link>
               </motion.div>
             ))}
@@ -196,7 +196,7 @@ export function PricingPageClient() {
                 Contact Us <ArrowUpRight size={16} />
               </Link>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917509208934"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline"

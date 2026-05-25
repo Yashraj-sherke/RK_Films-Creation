@@ -216,8 +216,8 @@ export function ContactPageClient() {
                     {
                       icon: <Phone size={18} />,
                       label: "Phone",
-                      value: "+91 98765 43210",
-                      href: "tel:+919876543210",
+                      value: "+91 7509208934",
+                      href: "tel:+917509208934",
                     },
                     {
                       icon: <Mail size={18} />,

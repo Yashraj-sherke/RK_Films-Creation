@@ -619,7 +619,7 @@ function PricingPreview() {
           description="Premium quality photography at competitive rates. Choose the package that fits your story."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
           {pricingPlans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -629,12 +629,12 @@ function PricingPreview() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`relative p-8 border transition-all duration-500 hover:border-gold/30 flex flex-col card-premium ${
                 plan.popular
-                  ? "border-gold/40 bg-gold/[0.03] pt-10"
+                  ? "border-gold/40 bg-gold/[0.03] md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                   : "border-white/5 bg-black-medium"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase whitespace-nowrap z-10">
                   Most Popular
                 </div>
               )}
