@@ -122,19 +122,19 @@ export function BlogPageClient() {
                 whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}>
                 <Link href={`/blog/${post.slug}`}>
-                  <div className="group border border-white/5 hover:border-gold/20 transition-all bg-black-medium h-full">
+                  <div className="group border border-white/5 hover:border-gold/20 transition-all bg-black-medium h-full flex flex-col">
                     <div className="relative h-48 overflow-hidden">
                       <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                         style={{ backgroundImage: `url('${post.image}')` }} />
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col flex-1">
                       <span className="inline-block px-2 py-0.5 bg-gold/10 text-gold text-[9px] font-accent tracking-[2px] uppercase mb-3">
                         {post.category}
                       </span>
                       <h3 className="font-display text-lg text-warm-white group-hover:text-gold transition-colors mb-2">
                         {post.title}
                       </h3>
-                      <p className="text-warm-white/40 text-sm line-clamp-2 mb-4">{post.excerpt}</p>
+                      <p className="text-warm-white/40 text-sm line-clamp-2 mb-4 flex-1">{post.excerpt}</p>
                       <div className="flex items-center justify-between text-warm-white/30 text-xs">
                         <span>{post.date}</span>
                         <span className="flex items-center gap-1 text-gold opacity-0 group-hover:opacity-100 transition-opacity">

@@ -23,7 +23,7 @@ export function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7, ease: [0.25, 0.8, 0.25, 1] }}
-      className={`mb-16 ${alignment === "center" ? "text-center" : "text-left"}`}
+      className={`mb-10 md:mb-16 ${alignment === "center" ? "text-center" : "text-left"}`}
     >
       <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">
         {subtitle}
@@ -37,7 +37,7 @@ export function SectionHeading({
       </h2>
       {description && (
         <p
-          className={`mt-5 max-w-xl text-base leading-relaxed ${
+          className={`mt-4 md:mt-5 max-w-xl text-sm md:text-base leading-relaxed ${
             alignment === "center" ? "mx-auto" : ""
           } ${light ? "text-black/50" : "text-warm-white/50"}`}
         >
@@ -45,7 +45,7 @@ export function SectionHeading({
         </p>
       )}
       <div
-        className={`mt-6 ${
+        className={`mt-5 md:mt-6 ${
           alignment === "center" ? "gold-line-center" : "gold-line"
         }`}
       />

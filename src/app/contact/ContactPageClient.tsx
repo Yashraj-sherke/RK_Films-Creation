@@ -108,7 +108,7 @@ export function ContactPageClient() {
                         onChange={(e) =>
                           setFormState({ ...formState, name: e.target.value })
                         }
-                        className="w-full bg-transparent border border-white/10 px-4 py-3 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20"
+                        className="form-input"
                         placeholder="Your name"
                       />
                     </div>
@@ -123,7 +123,7 @@ export function ContactPageClient() {
                         onChange={(e) =>
                           setFormState({ ...formState, email: e.target.value })
                         }
-                        className="w-full bg-transparent border border-white/10 px-4 py-3 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20"
+                        className="form-input"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -139,7 +139,7 @@ export function ContactPageClient() {
                         onChange={(e) =>
                           setFormState({ ...formState, phone: e.target.value })
                         }
-                        className="w-full bg-transparent border border-white/10 px-4 py-3 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20"
+                        className="form-input"
                         placeholder="+91 98765 43210"
                       />
                     </div>
@@ -156,7 +156,7 @@ export function ContactPageClient() {
                             subject: e.target.value,
                           })
                         }
-                        className="w-full bg-transparent border border-white/10 px-4 py-3 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors"
+                        className="form-input"
                       >
                         <option value="" className="bg-black">
                           Select a topic
@@ -187,7 +187,7 @@ export function ContactPageClient() {
                       onChange={(e) =>
                         setFormState({ ...formState, message: e.target.value })
                       }
-                      className="w-full bg-transparent border border-white/10 px-4 py-3 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20 resize-none"
+                      className="form-input resize-none"
                       placeholder="Tell us about your project..."
                     />
                   </div>
@@ -282,9 +282,9 @@ export function ContactPageClient() {
               </div>
 
               {/* Map placeholder */}
-              <div className="aspect-video bg-black-medium border border-white/5 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={32} className="text-gold/30 mx-auto mb-2" />
+              <div className="aspect-video min-h-[220px] bg-black-medium border border-white/5 flex items-center justify-center rounded-sm">
+                <div className="text-center px-4">
+                  <MapPin size={32} className="text-gold/30 mx-auto mb-3" />
                   <p className="text-warm-white/30 text-sm">
                     Interactive map loads here
                   </p>

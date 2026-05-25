@@ -178,6 +178,14 @@ body {
   border: 1px solid var(--color-glass-border);
 }
 
+.footer-texture {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(201, 168, 76, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.05), transparent 35%),
+    radial-gradient(circle at 70% 80%, rgba(201, 168, 76, 0.06), transparent 45%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 35%);
+}
+
 .text-gradient-gold {
   background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 50%, var(--color-gold-dark) 100%);
   -webkit-background-clip: text;
@@ -211,7 +219,13 @@ body {
 .container-luxury {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
+}
+
+@media (min-width: 640px) {
+  .container-luxury {
+    padding: 0 32px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -220,10 +234,50 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .container-luxury {
+    padding: 0 64px;
+  }
+}
+
 @media (min-width: 1200px) {
   .container-luxury {
     padding: 0 80px;
   }
+}
+
+/* ===== FORM STYLES ===== */
+
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  color: var(--color-warm-white);
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(245, 240, 235, 0.2);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.08);
+}
+
+.form-input option {
+  background: var(--color-black);
+}
+
+/* ===== FOCUS STATES ===== */
+
+.btn-gold:focus-visible,
+.btn-outline:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
 }
 
 /* ===== BUTTON STYLES ===== */
@@ -324,4 +378,202 @@ body {
   background: linear-gradient(90deg, var(--color-black-medium) 25%, var(--color-charcoal) 50%, var(--color-black-medium) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* ===== CINEMATIC ENHANCEMENTS ===== */
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(50px) scale(0.5); opacity: 0; }
+}
+
+@keyframes light-sweep {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(200%) rotate(25deg); }
+}
+
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(201, 168, 76, 0.1); }
+  50% { border-color: rgba(201, 168, 76, 0.4); }
+}
+
+@keyframes text-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cinematic grain overlay */
+.grain-overlay::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Light sweep effect */
+.light-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-sweep::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.06), transparent);
+  animation: light-sweep 8s ease-in-out infinite;
+}
+
+/* Animated border glow */
+.border-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+.animated-gradient-text {
+  background: linear-gradient(270deg, var(--color-gold-light), var(--color-gold), var(--color-gold-dark), var(--color-gold));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Premium card hover lift */
+.card-premium {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(201, 168, 76, 0.08);
+}
+
+/* Vignette effect */
+.vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Cinematic letterbox bars */
+.letterbox::before,
+.letterbox::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8%;
+  background: var(--color-black);
+  z-index: 5;
+  pointer-events: none;
+}
+.letterbox::before { top: 0; }
+.letterbox::after { bottom: 0; }
+
+/* Focus line animation for headings */
+.heading-line::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+  margin-top: 16px;
+  transition: width 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.heading-line:hover::after {
+  width: 80px;
+}
+
+/* Smooth image reveal */
+.image-reveal {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Noise texture for sections */
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Scroll to top button */
+.scroll-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-top:hover {
+  background: var(--color-gold);
+  color: var(--color-black);
+  transform: translateY(-3px);
 }

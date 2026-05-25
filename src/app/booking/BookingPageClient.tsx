@@ -14,6 +14,7 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import { services } from "@/lib/data";
 
 export function BookingPageClient() {
@@ -53,7 +54,7 @@ export function BookingPageClient() {
           <p className="text-warm-white/40 text-sm mb-8">
             Our team will contact you within 24 hours to confirm your session.
           </p>
-          <a href="/" className="btn-gold">Back to Home</a>
+          <Link href="/" className="btn-gold">Back to Home</Link>
         </motion.div>
       </section>
     );
@@ -80,9 +81,9 @@ export function BookingPageClient() {
       <section className="section-padding bg-black">
         <div className="container-luxury max-w-3xl">
           {/* Progress */}
-          <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-12">
             {[1, 2].map((s) => (
-              <div key={s} className="flex items-center gap-2">
+              <div key={s} className="flex items-center gap-2 sm:gap-3">
                 <div className={`w-8 h-8 flex items-center justify-center text-sm font-accent ${
                   step >= s ? "bg-gold text-black" : "border border-white/20 text-warm-white/40"
                 }`}>{s}</div>
@@ -107,7 +108,7 @@ export function BookingPageClient() {
                   </label>
                   <select required value={form.eventType}
                     onChange={(e) => updateField("eventType", e.target.value)}
-                    className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors">
+                    className="form-input">
                     <option value="" className="bg-black">Select event type</option>
                     {services.map((s) => (
                       <option key={s.id} value={s.id} className="bg-black">{s.title}</option>
@@ -121,7 +122,7 @@ export function BookingPageClient() {
                     </label>
                     <input type="date" required value={form.eventDate}
                       onChange={(e) => updateField("eventDate", e.target.value)}
-                      className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors" />
+                      className="form-input" />
                   </div>
                   <div>
                     <label className="block text-[11px] font-accent tracking-[2px] uppercase text-warm-white/40 mb-2">
@@ -129,7 +130,7 @@ export function BookingPageClient() {
                     </label>
                     <input type="text" required value={form.location} placeholder="City or venue"
                       onChange={(e) => updateField("location", e.target.value)}
-                      className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20" />
+                      className="form-input" />
                   </div>
                 </div>
                 <div>
@@ -138,7 +139,7 @@ export function BookingPageClient() {
                   </label>
                   <select value={form.budget}
                     onChange={(e) => updateField("budget", e.target.value)}
-                    className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors">
+                    className="form-input">
                     <option value="" className="bg-black">Select budget range</option>
                     <option value="under-25k" className="bg-black">Under ₹25,000</option>
                     <option value="25k-50k" className="bg-black">₹25,000 - ₹50,000</option>
@@ -166,7 +167,7 @@ export function BookingPageClient() {
                     </label>
                     <input type="text" required value={form.name} placeholder="Your name"
                       onChange={(e) => updateField("name", e.target.value)}
-                      className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20" />
+                      className="form-input" />
                   </div>
                   <div>
                     <label className="block text-[11px] font-accent tracking-[2px] uppercase text-warm-white/40 mb-2">
@@ -174,7 +175,7 @@ export function BookingPageClient() {
                     </label>
                     <input type="tel" required value={form.phone} placeholder="+91 98765 43210"
                       onChange={(e) => updateField("phone", e.target.value)}
-                      className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20" />
+                      className="form-input" />
                   </div>
                 </div>
                 <div>
@@ -183,7 +184,7 @@ export function BookingPageClient() {
                   </label>
                   <input type="email" required value={form.email} placeholder="your@email.com"
                     onChange={(e) => updateField("email", e.target.value)}
-                    className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20" />
+                    className="form-input" />
                 </div>
                 <div>
                   <label className="block text-[11px] font-accent tracking-[2px] uppercase text-warm-white/40 mb-2">
@@ -191,7 +192,7 @@ export function BookingPageClient() {
                   </label>
                   <textarea rows={4} value={form.notes} placeholder="Tell us more about your vision..."
                     onChange={(e) => updateField("notes", e.target.value)}
-                    className="w-full bg-transparent border border-white/10 px-4 py-3.5 text-warm-white text-sm focus:border-gold/50 focus:outline-none transition-colors placeholder:text-warm-white/20 resize-none" />
+                    className="form-input resize-none" />
                 </div>
                 <div className="flex gap-4">
                   <button type="button" onClick={() => setStep(1)} className="btn-outline">Back</button>

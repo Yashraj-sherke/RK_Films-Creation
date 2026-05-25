@@ -60,7 +60,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-black-light border-t border-white/5">
+    <footer className="relative bg-black-light border-t border-white/5 footer-texture">
       {/* CTA Banner */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/10 via-transparent to-gold/10" />
@@ -68,14 +68,14 @@ export function Footer() {
           <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">
             Ready to Create Something Beautiful?
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-warm-white mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-warm-white mb-5">
             Let&apos;s Tell Your Story
           </h2>
-          <p className="text-warm-white/50 max-w-md mx-auto mb-10 font-light">
+          <p className="text-warm-white/50 max-w-lg mx-auto mb-10 font-light">
             Every love story deserves to be captured beautifully. Book your
             session and let&apos;s create timeless memories together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/booking" className="btn-gold">
               Book a Session
               <ArrowUpRight size={16} />
@@ -89,25 +89,25 @@ export function Footer() {
 
       {/* Main Footer */}
       <div className="container-luxury py-16 border-t border-white/5">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10 items-start">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 border border-gold/60 flex items-center justify-center">
+            <div className="h-10 flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 border border-gold/60 flex items-center justify-center shrink-0">
                 <span className="font-display text-gold text-lg font-bold">
                   RK
                 </span>
               </div>
-              <div>
-                <h3 className="font-display text-lg tracking-[3px]">
+              <div className="flex flex-col justify-center">
+                <h3 className="font-display text-lg tracking-[3px] leading-tight">
                   RK PHOTOGRAPHY
                 </h3>
-                <p className="text-[9px] tracking-[4px] text-warm-white/40 uppercase font-accent">
+                <p className="text-[9px] tracking-[4px] text-warm-white/40 uppercase font-accent leading-tight mt-0.5">
                   Since 2018
                 </p>
               </div>
             </div>
-            <p className="text-warm-white/40 text-sm leading-relaxed mb-6">
+            <p className="text-warm-white/40 text-sm leading-relaxed mb-6 max-w-sm">
               Crafting timeless visual stories with passion, precision, and a
               touch of cinematic magic. Every frame tells your unique story.
             </p>
@@ -129,9 +129,12 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-6">
-              Services
-            </h4>
+            <div className="h-10 flex flex-col justify-center mb-6">
+              <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-3">
+                Services
+              </h4>
+              <div className="h-px w-12 bg-gradient-to-r from-gold/60 to-transparent" />
+            </div>
             <ul className="space-y-3">
               {footerServices.map((service) => (
                 <li key={service.label}>
@@ -148,9 +151,12 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-6">
-              Quick Links
-            </h4>
+            <div className="h-10 flex flex-col justify-center mb-6">
+              <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-3">
+                Quick Links
+              </h4>
+              <div className="h-px w-12 bg-gradient-to-r from-gold/60 to-transparent" />
+            </div>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.label}>
@@ -167,22 +173,25 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-6">
-              Get in Touch
-            </h4>
+            <div className="h-10 flex flex-col justify-center mb-6">
+              <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-3">
+                Get in Touch
+              </h4>
+              <div className="h-px w-12 bg-gradient-to-r from-gold/60 to-transparent" />
+            </div>
             <div className="space-y-4">
               <a
                 href="tel:+919876543210"
                 className="flex items-center gap-3 text-sm text-warm-white/40 hover:text-gold transition-colors"
               >
-                <Phone size={14} />
+                <Phone size={14} className="shrink-0" />
                 +91 98765 43210
               </a>
               <a
                 href="mailto:hello@rkphotography.com"
                 className="flex items-center gap-3 text-sm text-warm-white/40 hover:text-gold transition-colors"
               >
-                <Mail size={14} />
+                <Mail size={14} className="shrink-0" />
                 hello@rkphotography.com
               </a>
               <div className="flex items-start gap-3 text-sm text-warm-white/40">
@@ -196,8 +205,8 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="container-luxury py-6 border-t border-white/5">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[11px] text-warm-white/30 font-accent tracking-[1px]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-[11px] text-warm-white/30 font-accent tracking-[1px] text-center md:text-left">
             © {new Date().getFullYear()} RK Photography. All rights reserved.
           </p>
           <p className="text-[11px] text-warm-white/30 font-accent tracking-[1px] flex items-center gap-1">

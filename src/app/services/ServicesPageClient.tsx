@@ -63,9 +63,7 @@ export function ServicesPageClient() {
               >
                 <Link href={`/services/${service.id}`}>
                   <div
-                    className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-white/5 hover:bg-white/[0.02] transition-all duration-500 ${
-                      i % 2 === 1 ? "lg:direction-rtl" : ""
-                    }`}
+                    className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-white/5 hover:bg-white/[0.02] transition-all duration-500 card-premium`}
                   >
                     {/* Image */}
                     <div
@@ -76,7 +74,7 @@ export function ServicesPageClient() {
                       <div
                         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                         style={{
-                          backgroundImage: `url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=70')`,
+                          backgroundImage: `url('${service.image}')`,
                         }}
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
@@ -86,7 +84,7 @@ export function ServicesPageClient() {
                     </div>
 
                     {/* Content */}
-                    <div className="flex flex-col justify-center p-8 lg:p-16">
+                    <div className="flex flex-col justify-center p-8 lg:p-12">
                       <p className="font-accent text-[11px] tracking-[4px] uppercase text-gold mb-3">
                         {service.tagline}
                       </p>

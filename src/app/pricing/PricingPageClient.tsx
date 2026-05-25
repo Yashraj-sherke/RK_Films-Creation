@@ -85,7 +85,7 @@ export function PricingPageClient() {
       {/* Pricing Cards */}
       <section className="section-padding bg-black">
         <div className="container-luxury">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
             {pricingPlans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -93,9 +93,9 @@ export function PricingPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 ${
+                className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 h-full flex flex-col ${
                   plan.popular
-                    ? "border-gold/40 bg-gold/[0.03] md:-mt-4 md:mb-0 md:py-12"
+                    ? "border-gold/40 bg-gold/[0.03] md:-mt-4 md:mb-0 md:py-12 pt-10"
                     : "border-white/5 bg-black-medium"
                 }`}
               >
@@ -116,7 +116,7 @@ export function PricingPageClient() {
                   </div>
                   <p className="text-warm-white/30 text-xs">{plan.period}</p>
                 </div>
-                <ul className="space-y-3 mb-10">
+                <ul className="space-y-3 mb-10 flex-1">
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
@@ -129,7 +129,7 @@ export function PricingPageClient() {
                 </ul>
                 <Link
                   href="/booking"
-                  className={`block text-center py-3.5 font-accent text-[12px] tracking-[1.5px] uppercase transition-all duration-300 ${
+                  className={`block text-center py-3.5 font-accent text-[12px] tracking-[1.5px] uppercase transition-all duration-300 mt-auto ${
                     plan.popular
                       ? "bg-gold text-black hover:bg-gold-light hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]"
                       : "border border-white/20 text-warm-white hover:border-gold hover:text-gold"

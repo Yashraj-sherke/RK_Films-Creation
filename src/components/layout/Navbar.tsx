@@ -68,16 +68,16 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="relative z-10 group">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 border border-gold/60 flex items-center justify-center group-hover:border-gold transition-colors duration-300">
+              <div className="w-10 h-10 border border-gold/60 flex items-center justify-center group-hover:border-gold transition-colors duration-300 shrink-0">
                 <span className="font-display text-gold text-lg font-bold">
                   RK
                 </span>
               </div>
-              <div className="hidden sm:block">
-                <h1 className="font-display text-lg tracking-[3px] text-warm-white group-hover:text-gold transition-colors duration-300">
+              <div className="hidden sm:flex flex-col justify-center">
+                <h1 className="font-display text-lg tracking-[3px] leading-tight text-warm-white group-hover:text-gold transition-colors duration-300">
                   RK PHOTOGRAPHY
                 </h1>
-                <p className="text-[9px] tracking-[4px] text-warm-white/40 uppercase font-accent">
+                <p className="text-[9px] tracking-[4px] text-warm-white/40 uppercase font-accent leading-tight mt-0.5">
                   Cinematic Visuals
                 </p>
               </div>
@@ -97,7 +97,7 @@ export function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1 px-4 py-2 text-[13px] font-accent font-medium tracking-[1px] uppercase text-warm-white/70 hover:text-gold transition-colors duration-300"
+                  className="flex items-center gap-1 px-4 py-2.5 rounded-full text-[12px] font-accent font-medium tracking-[1px] uppercase text-warm-white/70 hover:text-gold hover:bg-white/5 transition-all duration-300"
                 >
                   {link.label}
                   {link.submenu && <ChevronDown size={12} />}
@@ -137,7 +137,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/booking"
-              className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-gold text-black font-accent font-semibold text-[12px] tracking-[1.5px] uppercase hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]"
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-gold text-black font-accent font-semibold text-[12px] tracking-[1.5px] uppercase hover:bg-gold-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]"
             >
               <Phone size={13} />
               Book Now
@@ -163,7 +163,7 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl lg:hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full gap-1 pt-20 overflow-y-auto">
+            <div className="flex flex-col items-center justify-center h-full gap-2 pt-20 pb-10 overflow-y-auto">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.label}
@@ -180,7 +180,7 @@ export function Navbar() {
                     {link.label}
                   </Link>
                   {link.submenu && (
-                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 px-6 pb-2">
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 px-8 pb-3">
                       {link.submenu.map((sub) => (
                         <Link
                           key={sub.label}

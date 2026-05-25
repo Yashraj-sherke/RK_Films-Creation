@@ -55,6 +55,11 @@ export function FAQPageClient() {
 
       <section className="section-padding bg-black">
         <div className="container-luxury max-w-3xl">
+          <SectionHeading
+            subtitle="Questions & Answers"
+            title="Frequently Asked Questions"
+            description="Find answers to common questions about our photography services, packages, and process."
+          />
           {faqs.map((faq, i) => (
             <FAQItem key={faq.question} question={faq.question} answer={faq.answer} index={i} />
           ))}

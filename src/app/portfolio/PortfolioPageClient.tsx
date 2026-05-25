@@ -75,7 +75,7 @@ export function PortfolioPageClient() {
       </section>
 
       {/* Filters */}
-      <section className="py-8 bg-black border-b border-white/5 sticky top-0 z-30">
+      <section className="py-8 bg-black border-b border-white/5 sticky top-[64px] z-30 backdrop-blur-xl bg-black/90">
         <div className="container-luxury">
           <div className="flex flex-wrap justify-center gap-2">
             {portfolioCategories.map((cat) => (
@@ -98,7 +98,7 @@ export function PortfolioPageClient() {
       {/* Masonry Grid */}
       <section className="section-padding bg-black">
         <div className="container-luxury">
-          <motion.div layout className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          <motion.div layout className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
             <AnimatePresence mode="popLayout">
               {filtered.map((item, i) => (
                 <motion.div

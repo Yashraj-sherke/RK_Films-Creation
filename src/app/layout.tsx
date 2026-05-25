@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingElements } from "@/components/ui/FloatingElements";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -71,11 +72,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfair.variable} ${inter.variable} ${poppins.variable}`}
+      suppressHydrationWarning
     >
-      <body className="bg-black text-warm-white antialiased">
+      <body className="bg-black text-warm-white antialiased grain-overlay" suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingElements />
       </body>
     </html>
   );

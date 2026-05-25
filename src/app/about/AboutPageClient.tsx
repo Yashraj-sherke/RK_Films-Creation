@@ -59,7 +59,7 @@ export function AboutPageClient() {
                       "url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800&q=80')",
                   }}
                 />
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/30 flex items-center justify-center bg-black">
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/30 flex items-center justify-center bg-black z-10">
                   <div className="text-center">
                     <span className="font-display text-3xl text-gold block">12+</span>
                     <span className="text-[9px] font-accent tracking-[2px] uppercase text-warm-white/40">
@@ -151,7 +151,7 @@ export function AboutPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center p-8 glass hover:border-gold/20 transition-all duration-500"
+                className="text-center p-8 glass hover:border-gold/20 transition-all duration-500 card-premium"
               >
                 <div className="w-14 h-14 mx-auto mb-5 border border-gold/30 flex items-center justify-center text-gold">
                   {value.icon}
