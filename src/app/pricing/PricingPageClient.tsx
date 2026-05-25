@@ -85,22 +85,23 @@ export function PricingPageClient() {
       {/* Pricing Cards */}
       <section className="section-padding bg-black">
         <div className="container-luxury">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
-            {pricingPlans.map((plan, i) => (
-              <motion.div
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full items-stretch justify-items-center">
+              {pricingPlans.map((plan, i) => (
+                <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 flex flex-col ${
+                className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 flex flex-col h-full w-full max-w-sm card-premium ${
                   plan.popular
                     ? "border-gold/40 bg-gold/[0.03] md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                     : "border-white/5 bg-black-medium"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase whitespace-nowrap z-10">
+                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase whitespace-nowrap z-10">
                     Most Popular
                   </div>
                 )}
@@ -137,8 +138,9 @@ export function PricingPageClient() {
                 >
                   Get Started
                 </Link>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <motion.p

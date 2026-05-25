@@ -619,22 +619,23 @@ function PricingPreview() {
           description="Premium quality photography at competitive rates. Choose the package that fits your story."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
-          {pricingPlans.map((plan, i) => (
-            <motion.div
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full items-stretch justify-items-center">
+            {pricingPlans.map((plan, i) => (
+              <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative p-8 border transition-all duration-500 hover:border-gold/30 flex flex-col card-premium ${
+              className={`relative p-8 border transition-all duration-500 hover:border-gold/30 flex flex-col h-full w-full max-w-sm card-premium ${
                 plan.popular
                   ? "border-gold/40 bg-gold/[0.03] md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                   : "border-white/5 bg-black-medium"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase whitespace-nowrap z-10">
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gold text-black text-[10px] font-accent font-bold tracking-[2px] uppercase whitespace-nowrap z-10">
                   Most Popular
                 </div>
               )}
@@ -663,7 +664,7 @@ function PricingPreview() {
               </ul>
               <Link
                 href="/booking"
-                className={`block text-center py-3 font-accent text-[12px] tracking-[1.5px] uppercase transition-all duration-300 ${
+                className={`block text-center py-3 font-accent text-[12px] tracking-[1.5px] uppercase transition-all duration-300 mt-auto ${
                   plan.popular
                     ? "bg-gold text-black hover:bg-gold-light"
                     : "border border-white/20 text-warm-white hover:border-gold hover:text-gold"
@@ -671,8 +672,9 @@ function PricingPreview() {
               >
                 Get Started
               </Link>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -684,13 +686,14 @@ function PricingPreview() {
    ============================ */
 function InstagramSection() {
   return (
-    <section className="py-20 bg-black-light border-y border-white/5">
+    <section className="pt-24 pb-32 bg-black-light border-y border-white/5">
       <div className="container-luxury text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="pb-6"
         >
           <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">
             Follow Our Journey
@@ -703,7 +706,7 @@ function InstagramSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-2 py-4">
           {[
             "photo-1519741497674-611481863552",
             "photo-1606216794074-735e91aa2c92",
@@ -747,7 +750,7 @@ function InstagramSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-8"
+          className="mt-8 pt-4"
         >
           <a
             href="https://instagram.com"

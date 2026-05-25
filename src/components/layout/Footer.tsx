@@ -64,18 +64,18 @@ export function Footer() {
       {/* CTA Banner */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/10 via-transparent to-gold/10" />
-        <div className="container-luxury py-20 text-center relative z-10">
-          <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">
+        <div className="container-luxury pt-28 pb-24 md:pt-32 md:pb-28 text-center relative z-10">
+          <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4 mx-auto max-w-2xl">
             Ready to Create Something Beautiful?
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-warm-white mb-5">
             Let&apos;s Tell Your Story
           </h2>
-          <p className="text-warm-white/50 max-w-lg mx-auto mb-10 font-light">
+          <p className="text-warm-white/50 max-w-lg mx-auto mb-12 font-light text-center">
             Every love story deserves to be captured beautifully. Book your
             session and let&apos;s create timeless memories together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
             <Link href="/booking" className="btn-gold">
               Book a Session
               <ArrowUpRight size={16} />
