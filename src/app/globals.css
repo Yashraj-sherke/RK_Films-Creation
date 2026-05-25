@@ -463,6 +463,19 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(201, 168, 76, 0.08);
 }
 
+/* Footer CTA fade-up sequence */
+.cta-fade-up-1,
+.cta-fade-up-2,
+.cta-fade-up-3,
+.cta-fade-up-4 {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.cta-fade-up-1 { animation-delay: 0.05s; }
+.cta-fade-up-2 { animation-delay: 0.12s; }
+.cta-fade-up-3 { animation-delay: 0.2s; }
+.cta-fade-up-4 { animation-delay: 0.28s; }
+
 /* Vignette effect */
 .vignette::after {
   content: '';

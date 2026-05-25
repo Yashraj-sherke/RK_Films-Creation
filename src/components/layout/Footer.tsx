@@ -60,22 +60,22 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-black-light border-t border-white/5 footer-texture">
+    <footer className="relative bg-black-light border-t border-white/5 footer-texture pt-10 pb-10">
       {/* CTA Banner */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden pb-12 md:pb-16">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/10 via-transparent to-gold/10" />
-        <div className="container-luxury pt-28 pb-24 md:pt-32 md:pb-28 text-center relative z-10">
-          <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4 mx-auto max-w-2xl">
+        <div className="container-luxury pt-28 pb-28 md:pt-32 md:pb-32 lg:pt-36 lg:pb-36 text-center relative z-10 flex flex-col items-center">
+          <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-5 mx-auto max-w-3xl text-center cta-fade-up-1">
             Ready to Create Something Beautiful?
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-warm-white mb-5">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-warm-white mb-6 text-center max-w-4xl mx-auto cta-fade-up-2">
             Let&apos;s Tell Your Story
           </h2>
-          <p className="text-warm-white/50 max-w-lg mx-auto mb-12 font-light text-center">
+          <p className="text-warm-white/50 max-w-2xl mx-auto mb-12 font-light text-center cta-fade-up-3">
             Every love story deserves to be captured beautifully. Book your
             session and let&apos;s create timeless memories together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 cta-fade-up-4">
             <Link href="/booking" className="btn-gold">
               Book a Session
               <ArrowUpRight size={16} />
