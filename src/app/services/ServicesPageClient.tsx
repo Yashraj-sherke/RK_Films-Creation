@@ -10,7 +10,7 @@ export function ServicesPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-100 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -63,7 +63,7 @@ export function ServicesPageClient() {
               >
                 <Link href={`/services/${service.id}`}>
                   <div
-                    className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-white/5 hover:bg-white/[0.02] transition-all duration-500 card-premium`}
+                    className={`group grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-white/5 hover:bg-white/2 transition-all duration-500 card-premium`}
                   >
                     {/* Image */}
                     <div

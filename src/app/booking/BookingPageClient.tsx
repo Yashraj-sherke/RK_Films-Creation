@@ -63,8 +63,8 @@ export function BookingPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[45vh] min-h-[320px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black-medium via-black to-black" />
+      <section className="relative h-[45vh] min-h-80 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-b from-black-medium via-black to-black" />
         <div className="relative z-10 text-center px-6">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">
@@ -90,7 +90,7 @@ export function BookingPageClient() {
                 <span className={`text-[11px] font-accent tracking-[1px] uppercase hidden sm:block ${
                   step >= s ? "text-gold" : "text-warm-white/30"
                 }`}>{s === 1 ? "Event Details" : "Your Info"}</span>
-                {s < 2 && <div className="w-12 h-[1px] bg-white/10" />}
+                {s < 2 && <div className="w-12 h-px bg-white/10" />}
               </div>
             ))}
           </div>

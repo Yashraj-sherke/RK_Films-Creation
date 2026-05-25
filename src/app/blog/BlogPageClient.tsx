@@ -71,8 +71,8 @@ export function BlogPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black-medium to-black" />
+      <section className="relative h-[50vh] min-h-87.5 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-b from-black-medium to-black" />
         <div className="relative z-10 text-center px-6">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">
@@ -93,7 +93,7 @@ export function BlogPageClient() {
             viewport={{ once: true }} className="mb-16">
             <Link href={`/blog/${blogPosts[0].slug}`}>
               <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 border border-white/5 hover:border-gold/20 transition-all">
-                <div className="relative h-64 lg:h-[400px] overflow-hidden">
+                <div className="relative h-64 lg:h-100 overflow-hidden">
                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url('${blogPosts[0].image}')` }} />
                 </div>

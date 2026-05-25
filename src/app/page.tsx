@@ -69,10 +69,10 @@ function HeroSection() {
   }, []);
 
   return (
-    <section ref={ref} className="relative h-screen min-h-[700px] overflow-hidden">
+    <section ref={ref} className="relative h-screen min-h-175 overflow-hidden">
       {/* Background with parallax + zoom */}
       <motion.div style={{ y, scale }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black z-10" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/30 to-black z-10" />
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -122,11 +122,11 @@ function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex items-center gap-3 mb-6"
         >
-          <div className="h-[1px] w-8 bg-gold/50" />
+          <div className="h-px w-8 bg-gold/50" />
           <p className="font-accent text-[11px] md:text-[12px] tracking-[4px] md:tracking-[6px] uppercase text-gold">
             Premium Photography & Cinematography
           </p>
-          <div className="h-[1px] w-8 bg-gold/50" />
+          <div className="h-px w-8 bg-gold/50" />
         </motion.div>
 
         <motion.h1
@@ -187,8 +187,8 @@ function HeroSection() {
       </motion.div>
 
       {/* Cinematic letterbox bars */}
-      <div className="absolute top-0 left-0 right-0 h-[3%] bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 h-[3%] bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-[3%] bg-linear-to-b from-black to-transparent z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3%] bg-linear-to-t from-black to-transparent z-20 pointer-events-none" />
     </section>
   );
 }
@@ -262,7 +262,7 @@ function ServicesSection() {
                         backgroundImage: `url('${service.image}')`,
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black-medium via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black-medium via-black/20 to-transparent" />
                     <div className="absolute top-4 left-4 text-3xl">
                       {service.icon}
                     </div>
@@ -366,9 +366,9 @@ function PortfolioPreview() {
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                 style={{ backgroundImage: `url('${img.url}')` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className={`relative z-10 h-full flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-                i === 0 || i === 5 ? "min-h-[400px] md:min-h-[564px]" : "min-h-[200px] md:min-h-[280px]"
+                i === 0 || i === 5 ? "min-h-100 md:min-h-141" : "min-h-50 md:min-h-70"
               }`}>
                 <p className="text-[10px] font-accent tracking-[3px] uppercase text-gold">
                   {img.category}
@@ -504,7 +504,7 @@ function WhyChooseUs() {
 function TestimonialsSection() {
   return (
     <section className="section-padding bg-black relative overflow-hidden noise-bg">
-      <div className="absolute top-20 right-20 text-[200px] text-white/[0.02] font-display leading-none select-none pointer-events-none">
+      <div className="absolute top-20 right-20 text-[200px] text-white/2 font-display leading-none select-none pointer-events-none">
         &ldquo;
       </div>
       <div className="container-luxury">
@@ -576,7 +576,7 @@ function ProcessSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+          <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-transparent via-gold/20 to-transparent" />
 
           {processSteps.map((step, i) => (
             <motion.div
@@ -630,7 +630,7 @@ function PricingPreview() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`relative p-8 border transition-all duration-500 hover:border-gold/30 flex flex-col h-full w-full max-w-sm card-premium ${
                 plan.popular
-                  ? "border-gold/40 bg-gold/[0.03] md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
+                  ? "border-gold/40 bg-gold/3 md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                   : "border-white/5 bg-black-medium"
               }`}
             >

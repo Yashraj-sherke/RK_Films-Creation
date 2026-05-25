@@ -50,9 +50,9 @@ export function PricingPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-87.5 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black-medium via-black to-black" />
+          <div className="absolute inset-0 bg-linear-to-b from-black-medium via-black to-black" />
         </div>
         <div className="relative z-10 text-center px-6">
           <motion.p
@@ -96,7 +96,7 @@ export function PricingPageClient() {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 className={`relative p-8 md:p-10 border transition-all duration-500 hover:border-gold/30 flex flex-col h-full w-full max-w-sm card-premium ${
                   plan.popular
-                    ? "border-gold/40 bg-gold/[0.03] md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
+                    ? "border-gold/40 bg-gold/3 md:scale-[1.03] shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                     : "border-white/5 bg-black-medium"
                 }`}
               >

@@ -43,7 +43,7 @@ export function PortfolioPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-87.5 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -75,7 +75,7 @@ export function PortfolioPageClient() {
       </section>
 
       {/* Filters */}
-      <section className="py-8 bg-black border-b border-white/5 sticky top-[64px] z-30 backdrop-blur-xl bg-black/90">
+      <section className="py-8 border-b border-white/5 sticky top-16 z-30 backdrop-blur-xl bg-black/90">
         <div className="container-luxury">
           <div className="flex flex-wrap justify-center gap-2">
             {portfolioCategories.map((cat) => (
@@ -98,7 +98,7 @@ export function PortfolioPageClient() {
       {/* Masonry Grid */}
       <section className="section-padding bg-black">
         <div className="container-luxury">
-          <motion.div layout className="columns-1 sm:columns-2 lg:columns-3 gap-4 [&>*]:mb-4">
+          <motion.div layout className="columns-1 sm:columns-2 lg:columns-3 gap-4 *:mb-4">
             <AnimatePresence mode="popLayout">
               {filtered.map((item, i) => (
                 <motion.div
@@ -114,8 +114,8 @@ export function PortfolioPageClient() {
                   <div
                     className={`relative overflow-hidden ${
                       item.orientation === "portrait"
-                        ? "aspect-[3/4]"
-                        : "aspect-[4/3]"
+                        ? "aspect-3/4"
+                        : "aspect-4/3"
                     }`}
                   >
                     <img
@@ -124,7 +124,7 @@ export function PortfolioPageClient() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-[10px] font-accent tracking-[3px] uppercase text-gold">
                         {item.category}

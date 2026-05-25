@@ -39,8 +39,8 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 export function FAQPageClient() {
   return (
     <>
-      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black-medium to-black" />
+      <section className="relative h-[50vh] min-h-87.5 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-b from-black-medium to-black" />
         <div className="relative z-10 text-center px-6">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-4">

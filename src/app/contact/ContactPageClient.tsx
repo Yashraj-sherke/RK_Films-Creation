@@ -31,7 +31,7 @@ export function ContactPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-87.5 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -282,7 +282,7 @@ export function ContactPageClient() {
               </div>
 
               {/* Map placeholder */}
-              <div className="aspect-video min-h-[220px] bg-black-medium border border-white/5 flex items-center justify-center rounded-sm">
+              <div className="aspect-video min-h-55 bg-black-medium border border-white/5 flex items-center justify-center rounded-sm">
                 <div className="text-center px-4">
                   <MapPin size={32} className="text-gold/30 mx-auto mb-3" />
                   <p className="text-warm-white/30 text-sm">

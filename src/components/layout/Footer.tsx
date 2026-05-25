@@ -63,7 +63,7 @@ export function Footer() {
     <footer className="relative bg-black-light border-t border-white/5 footer-texture pt-10 pb-10">
       {/* CTA Banner */}
       <div className="relative overflow-hidden pb-12 md:pb-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-gold/10 via-transparent to-gold/10" />
+        <div className="absolute inset-0 bg-linear-to-r from-gold/10 via-transparent to-gold/10" />
         <div className="container-luxury pt-28 pb-28 md:pt-32 md:pb-32 lg:pt-36 lg:pb-36 text-center relative z-10 flex flex-col items-center">
           <p className="font-accent text-[11px] tracking-[5px] uppercase text-gold mb-5 mx-auto max-w-3xl text-center cta-fade-up-1">
             Ready to Create Something Beautiful?
@@ -133,7 +133,7 @@ export function Footer() {
               <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-3">
                 Services
               </h4>
-              <div className="h-px w-12 bg-gradient-to-r from-gold/60 to-transparent" />
+              <div className="h-px w-12 bg-linear-to-r from-gold/60 to-transparent" />
             </div>
             <ul className="space-y-3">
               {footerServices.map((service) => (
@@ -155,7 +155,7 @@ export function Footer() {
               <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-3">
                 Quick Links
               </h4>
-              <div className="h-px w-12 bg-gradient-to-r from-gold/60 to-transparent" />
+              <div className="h-px w-12 bg-linear-to-r from-gold/60 to-transparent" />
             </div>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
@@ -177,7 +177,7 @@ export function Footer() {
               <h4 className="font-accent text-[11px] tracking-[3px] uppercase text-gold mb-3">
                 Get in Touch
               </h4>
-              <div className="h-px w-12 bg-gradient-to-r from-gold/60 to-transparent" />
+              <div className="h-px w-12 bg-linear-to-r from-gold/60 to-transparent" />
             </div>
             <div className="space-y-4">
               <a
