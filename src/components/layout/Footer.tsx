@@ -185,7 +185,7 @@ export function Footer() {
                 className="flex items-center gap-3 text-sm text-warm-white/40 hover:text-gold transition-colors"
               >
                 <Phone size={14} className="shrink-0" />
-                +91 98765 43210
+                +91 7509208934
               </a>
               <a
                 href="mailto:hello@rkphotography.com"
@@ -196,7 +196,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3 text-sm text-warm-white/40">
                 <MapPin size={14} className="mt-0.5 shrink-0" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>Umranala,Chhindwara,MadhyaPradesh, India</span>
               </div>
             </div>
           </div>
